@@ -1,2 +1,3 @@
 ·TODO: Reflect on what you learned this week and what is still unclear.
-today I have learned how to create a folder and how to run the stuff in the folder 
+This week I have learned how to manage my dev environment on the Mac system.     For example, using Git to save or back up my future work.       Vs code is a good software that allows someone like me a new student to get in touch with Python easily and understand it.    This week I using GitHub to help set up my Dev environment.
+This week when I set up the Dev environment on Mac, I met some troubles because Mac is different to the Windows system.   However after the tutor and other students help, I finally finish to set up the environment.   so I think I didn't have unclear this week's task.
