@@ -67,7 +67,7 @@ def loops_1a():
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
     choc_list = []
-    for i in range(8):
+    for i in range(10):
         choc_list.append("*")
     return choc_list
 
@@ -191,7 +191,6 @@ def loops_4():
         field.append(row)
     return field
 
-
 def loops_5():
     """Make the coordinates of the block.
 
@@ -219,7 +218,15 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(5):
+            row.append("(i{}, j{})".format(i, j))
+        field.append(row)
+    return field 
+    for row in field:
+      print(row)
 
 
 def loops_6():
@@ -242,7 +249,15 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(i + 1):
+            row.append(str(j))
+        field.append(row)
+    return field 
+    for row in field:
+      print(row)
 
 
 def loops_7():
@@ -266,7 +281,16 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    field = ""
+    rows = 5
+    for i in range(rows):
+        row = " " * (rows - i - 1) * 1
+        row += "*" * (i * 2 + 1)
+        row += "\n"
+        field += row
+    return field 
+    row = loops_7()
+    print(row)
 
 
 if __name__ == "__main__":
