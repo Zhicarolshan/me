@@ -66,10 +66,7 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    choc_list = []
-    for i in range(10):
-        choc_list.append("*")
-    return choc_list
+    return None
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -183,13 +180,8 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    field = []
-    for i in range(10):
-        row = []
-        for j in range(10):
-            row.append(str(j))
-        field.append(row)
-    return field
+    return None
+
 
 def loops_5():
     """Make the coordinates of the block.
