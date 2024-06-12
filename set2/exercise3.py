@@ -282,16 +282,19 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    field = ""
-    rows = 5
-    for i in range(rows):
-        row = " " * (rows - i - 1) * 1
-        row += "*" * (i * 2 + 1)
-        row += "\n"
-        field += row
-    return field 
-    row = loops_7()
-    print(row)
+    field = []
+    for i in range(5):
+        rows = []
+        for y in range(9):
+            if abs(y-4) <= i:
+                rows.append('*')
+            else:
+                rows.append(' ')
+        field.append(rows)
+    print(field)
+    return field
+    
+
 
 
 if __name__ == "__main__":
