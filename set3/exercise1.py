@@ -5,7 +5,7 @@ Modify each function until the tests pass.
 """
 
 
-def loop_ranger(start, stop='1, 10', step=2):
+def loop_ranger(start, stop=10, step=2):
     """Return a list of numbers between start and stop in steps of step.
 
     Using a while loop make a list of numbers that goes from the start number up
@@ -50,12 +50,12 @@ def stubborn_asker(low,high):
     Look up the docs for a function called "input"
     """
     while True:
-            num = int(input(f"Enter a number between {low} and {high}: "))
-            if low <= num <= high:
-                return num
-            else:
-                print(f"That's not within the range {low}-{high}. Please try again.")
-
+        val = input(f"please enter a number between {low} and {high}: ")
+        num = int(val)
+        if low <= num <= high:   
+            return num
+        else:
+            print(f"{val} is not between {low} and {high}, try again")
                 
             
                     
@@ -69,7 +69,12 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    while True:
+        number = input("Enter a number: ")
+        number = int(number)
+        return number
+    else:
+        print("That's not a valid number. Please try again.")
 
 
 def super_asker(low, high):
@@ -78,7 +83,14 @@ def super_asker(low, high):
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
-    return None
+    while True:
+        vale = input(f"please enter a number between {low} and {high}: ")
+        num = int(vale)
+        if low <= num <= high:   
+            return num
+        else:
+            print(f"{vale} is not between {low} and {high}, try again")
+    
 
 
 if __name__ == "__main__":
@@ -88,7 +100,7 @@ if __name__ == "__main__":
     # code is robust to the situations that you'll see in action.
     # NOTE: because some of these take user input you can't run them from
 
-    print("\nloop_ranger", loop_ranger(1, 10, 2))
+    print("\nloop_ranger", loop_ranger(3, 10, 2))
     print("\ntwo_step_ranger", two_step_ranger(1, 10))
     print("\nstubborn_asker")
     stubborn_asker(30, 45)
