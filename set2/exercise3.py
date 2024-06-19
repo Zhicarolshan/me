@@ -39,9 +39,9 @@ def fix_it(moves=True, should_move=True):
     if moves and should_move:
         return"No Problem"
     elif moves and not should_move:
-        return "WD-40"
-    elif not moves and should_move:
         return "Duct Tape"
+    elif not moves and should_move:
+        return "WD-40"
     else:
         return "No Problem"
 
@@ -72,7 +72,7 @@ def loops_1a():
     return choc_list
 
 
-def loops_1c(number_of_items=5, symbol="#"):
+def loops_1c():
     """Respond to variables.
 
     Return a list of number_of_items items, each one a

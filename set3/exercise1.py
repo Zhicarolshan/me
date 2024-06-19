@@ -5,7 +5,7 @@ Modify each function until the tests pass.
 """
 
 
-def loop_ranger(start, stop=None, step=1):
+def loop_ranger(start, stop='1, 10', step=2):
     """Return a list of numbers between start and stop in steps of step.
 
     Using a while loop make a list of numbers that goes from the start number up
@@ -17,7 +17,12 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+    result = []
+    current = start
+    while current < stop:
+        result.append(current)
+        current += step
+    return result
 
 
 def two_step_ranger(start, stop):
@@ -28,10 +33,15 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
+    result = []
+    current = start
+    while current < stop:
+        result.append(current)
+        current += 2
+    return result 
 
 
-def stubborn_asker(low, high):
+def stubborn_asker(low,high):
     """Ask for a number between low and high until actually given one.
 
     Ask for a number, and if the response is outside the bounds keep asking
@@ -39,7 +49,17 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    return None
+    while True:
+            num = int(input(f"Enter a number between {low} and {high}: "))
+            if low <= num <= high:
+                return num
+            else:
+                print(f"That's not within the range {low}-{high}. Please try again.")
+
+                
+            
+                    
+    
 
 
 def not_number_rejector(message):
