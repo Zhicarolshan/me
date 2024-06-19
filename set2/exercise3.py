@@ -72,7 +72,7 @@ def loops_1a():
     return choc_list
 
 
-def loops_1c():
+def loops_1c(number_of_items=5, symbol='#'):
     """Respond to variables.
 
     Return a list of number_of_items items, each one a
@@ -83,8 +83,8 @@ def loops_1c():
     or the symbol, let it be whatever it wants to be.
     """
     choc_list = []
-    for i in range(5):
-        choc_list.append("#")
+    for i in range(number_of_items):
+        choc_list.append(symbol)
     return choc_list
 
 
