@@ -37,7 +37,7 @@ def get_some_details():
          dictionaries.
     """
     json_file = open(LOCAL + "/lazyduck.json").read()
-    data = json. loads(json_data)
+    data = json.loads(json_file)
     last_name = data["results"][0]["name"]["last"]
     password = data["results"][0]["login"]["password"]
     postcode = data["results"][0]["location"]["postcode"]
@@ -95,13 +95,12 @@ def wordy_pyramid():
             word = response.text
             pyramid.append(word)
 
-        for i in range(11, 4, -2):
+    for i in range(20, 2, -2):
         url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}"
         response = requests.get(url)
         if response.status_code == 200:
             word = response.text
             pyramid.append(word)
-    
 
     return pyramid
 
@@ -121,16 +120,22 @@ def pokedex(low=1, high=5):
          variable and then future access will be easier.
     """
 
-    count = 0
-    content ="M10 P1"
-    with open("set4/Trispokedovetiles(aser).gcode") as f:
-        lines = f.readlines( )
-        for line in lines:
-            count += line.count(content)
-    with open("set4/lasers.pew", mode="w") as f:
-        f.write(str(count))
-
-    return {"name": None, "weight": None, "height": None}
+    max_height = -1
+    name = None
+    height = None
+    weight = None
+    for idx in range(low, high + 1):
+        url = f"https://pokeapi.co/api/v2/pokemon/{idx}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            pokemon = json.loads(response.text)
+            h = int(pokemon["height"])
+            if h > max_height:
+                max_height = h
+                name = pokemon["forms"][0]["name"]
+                height = h
+                weight = int(pokemon["weight"])
+    return {"name": name, "weight": weight, "height": height}
 
 
 def diarist():
@@ -150,18 +155,15 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    gcode_file = "Trispokedovetiles(laser).gcode"
-    output_file = "Set4/lasers.pew"
 
     count = 0
-
-    with open(gcode_file, "r", encoding="utf-8") as file:
-        for line in file:
-            if "M10 P1" in line:
-                count += 1
-
-    with open(output_file, "w", encoding="utf-8") as file:
-        file.write(str(count))
+    content = "M10 P1"
+    with open("set4/Trispokedovetiles(laser).gcode") as f:
+        lines = f.readlines()
+        for line in lines:
+            count += line.count(content)
+    with open("set4/lasers.pew", mode="w") as f:
+        f.write(str(count))
 
 
 if __name__ == "__main__":
