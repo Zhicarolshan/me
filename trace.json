@@ -238,7 +238,7 @@
   "7",
   {
     "of_total": 34,
-    "mark": 31,
+    "mark": 30,
     "results": [
       {
         "value": 1,
@@ -345,8 +345,8 @@
         "name": "\npet_filter:\n    given:    p\n    expected: ['pig', 'sheep', 'guinea pig', 'python', 'scorpion', 'pigeon', 'alpaca', 'guppy']\n    got:      ['pig', 'sheep', 'guinea pig', 'python', 'scorpion', 'pigeon', 'alpaca', 'guppy']"
       },
       {
-        "value": 0,
-        "name": "\nbest_letter_for_pets:\n    given:    []\n    expected: e\n    got:      name 'ascii_lowercase' is not defined"
+        "value": 1,
+        "name": "\nbest_letter_for_pets:\n    given:    * no args *\n    expected: e\n    got:      e"
       },
       {
         "value": 1,
@@ -361,20 +361,20 @@
         "name": "\nrandom_filler_text:\n    given:    1000\n    expected: True\n    got:      True"
       },
       {
-        "value": 1,
-        "name": "\nfast_filler:\n    given:    100\n    expected: True\n    got:      True"
+        "value": 0,
+        "name": "\nfast_filler:\n    given:    [100]\n    expected: True\n    got:      8"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      False"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      8"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      False"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      8"
       },
       {
-        "value": 1,
-        "name": "subsequent fast_filler"
+        "value": 0,
+        "name": "subsequent fast_filler failed: 8"
       }
     ],
     "week_number": 8

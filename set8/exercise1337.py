@@ -171,7 +171,7 @@ def best_letter_for_pets() -> str:
     the_alphabet = string.ascii_lowercase
     max_list = 0
     most_popular_letter = ""
-    for letter in ascii_lowercase:
+    for letter in the_alphabet:
         filtered_pets = pet_filter(letter)
         if len(filtered_pets) > max_list:
             max_list = len(filtered_pets)
@@ -238,8 +238,6 @@ def random_filler_text(number_of_words=200) -> str:
         word_length = random.randint(3, 7)
         word = random.choice(my_dict[word_length])
         words.append(word)
-    return " ".join(words)
-
     return " ".join(words)
 
 
