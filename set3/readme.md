@@ -1,4 +1,3 @@
-TODO: Reflect on what you learned this week and what is still unclear.
 This week I have learned a string, try/expect, 'for' and 'while' loop.
 From the exercises, I started to apply Algorithms that Binary searched on the exercise,
 Binary search is an efficient algorithm for finding an item from a sorted list of items.

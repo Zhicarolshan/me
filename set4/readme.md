@@ -1,4 +1,3 @@
-TODO: Reflect on what you learned this week and what is still unclear.
 This week I started doing the open data project by using Pandas, importing the data and loading the data.
 my interesting area which I want to analyze is the dwellings type/ trend in Sydney.
 I am a Mac user and the dataset I found is an Excel file that includes several tables and it can't be exported as csv file.
